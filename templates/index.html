@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+    <div class="login">
+      <h1>Heart Disease Classifier</h1>
+      <div class="result">
+        Result:
+        <span>{{prediction_text}}</span>
+      </div>
+      <form action="predict" method="POST">
+        <div class="input-box">
+          <div class="heart-img">
+            <img src="../static/images/heart_img.png" alt="Heart" />
+          </div>
+          <div class="input-container">
+            <label for="age">Age</label>
+            <input
+              id="age"
+              name="Age"
+              type="number"
+              step="any"
+              placeholder="Age"
+              required="required"
+            />
+          </div>
+          <div class="input-container">
+            <label for="sex">Sex</label>
+            <input
+              id="sex"
+              name="Sex"
+              type="number"
+              step="any"
+              placeholder="Sex"
+              required="required"
+            />
+          </div>
+          <div class="input-container">
+            <label for="CPT">Chest Pain Type</label>
+            <input
+              id="CPT"
+              name="ChestPainType"
+              type="number"
+              step="any"
+              placeholder="Chest Pain Type"
+              required="required"
+            />
+          </div>
+          <div class="input-container">
+            <label for="RBP">Resting Blood Pressure</label>
+            <input
+              name="RestingBloodPressure"
+              type="number"
+              step="any"
+              placeholder="Resting Blood Pressure"
+              required="required"
+            />
+          </div>
+          <div class="input-container">
+            <label for="SerumC">Serum Cholestrol</label>
+            <input
+              id="SerumC"
+              name="SerumCholestrol"
+              type="number"
+              step="any"
+              placeholder="Serum Cholestrol (mg/dl)"
+              required="required"
+            />
+          </div>
+          <div class="input-container">
+            <label for="FBS">Fasting Blood Sugar</label>
+            <input
+              id="FBS"
+              name="FastingBloodSugar"
+              type="number"
+              step="any"
+              placeholder="Fasting Blood Sugar > 10 mg/dl"
+              required="required"
+            />
+          </div>
+          <div class="input-container">
+            <label for="RECGR">Resting ECG Result</label>
+            <input
+              id="RECGR"
+              name="RestingECGResult"
+              type="number"
+              step="any"
+              placeholder="Resting ECG Result (0, 1, 2)"
+              required="required"
+            />
+          </div>
+          <div class="input-container">
+            <label for="MHRA">Max Heart Rate Achieved</label>
+            <input
+              id="MHRA"
+              name="MaxHeartRateAchieved"
+              type="number"
+              step="any"
+              placeholder="Max Heart Rate Achieved"
+              required="required"
+            />
+          </div>
+          <div class="input-container">
+            <label for="EIA">Exercise Induced Angina</label>
+            <input
+              id="EIA"
+              name="ExerciseInducedAngina"
+              type="number"
+              step="any"
+              placeholder="Exercise Induced Angina"
+              required="required"
+            />
+          </div>
+          <div class="input-container">
+            <label for="oldpeak">Oldpeak</label>
+            <input
+              id="oldpeak"
+              name="Oldpeak"
+              type="number"
+              step="any"
+              placeholder="Oldpeak = ST depression induced by exercise relative to rest"
+              required="required"
+            />
+          </div>
+          <div class="input-container">
+            <label for="slope">Slope of peak Exercise</label>
+            <input
+              id="slope"
+              name="Slope"
+              type="number"
+              step="any"
+              placeholder="The slope of the peak exercise ST segment"
+              required="required"
+            />
+          </div>
+          <div class="input-container">
+            <label for="MV">Number of major vessels</label>
+            <input
+              id="MV"
+              name="MajorVessels"
+              type="number"
+              step="any"
+              placeholder="Number of major vessels (0-3) colored by flourosopy"
+              required="required"
+            />
+          </div>
+          <div class="input-container">
+            <label for="thal">Thal</label>
+            <input
+              id="thal"
+              name="Thal"
+              type="number"
+              step="any"
+              placeholder="Thal: 0 = normal; 1 = fixed defect; 2 = reversable defect"
+              required="required"
+            />
+          </div>
+        </div>
+        <div class="submit-btn">
+          <button type="submit" class="btn">Predict</button>
+        </div>
+      </form>
+    </div>
+    <script src="/Users/kunal/Desktop/DecisionTree/static/index.js"></script>
+  </body>
+</html>
